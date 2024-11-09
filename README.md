@@ -16,7 +16,11 @@ priceForPenalDays нараховує за кожен день просрочки
 
 Приклад виводу:
 Rental statement for Arthur Netrebin:
+
 Arthur Netrebin has rented 'Inception' from 2024-11-09 to 2024-12-07. Total cost: 139,50
+
 Arthur Netrebin has rented 'Cartoon' but not yet returned.
+
 Arthur Netrebin has rented 'Kingdome Come Deliverence' from 2024-11-07 to 2024-11-10. Total cost: 27,00
+
 Total cost for all returned rentals: 166.5
