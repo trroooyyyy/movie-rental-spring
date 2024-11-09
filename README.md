@@ -1,5 +1,5 @@
-Java: 21
-Database: MySQL
+Java: 21; 
+Database: MySQL; 
 Скріншоти проєкту: https://imgur.com/a/dSjnnIa
 
 
