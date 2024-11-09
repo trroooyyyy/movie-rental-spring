@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Editing the customer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Editing the customer</h2>
+
+    <form th:action="@{/ui/customers/edit/{id}(id=${customer.id})}" th:object="${customer}" method="post" class="mt-3">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Enter new name" required>
+        </div>
+        <button type="submit" class="btn btn-success">Add</button>
+        <a th:href="@{/ui/customers/}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+</body>
+</html>

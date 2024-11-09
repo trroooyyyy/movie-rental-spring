@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Editing Rental</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Editing Rental</h2>
+
+    <form th:action="@{/ui/rentals/edit/{id}(id=${rental.id})}" th:object="${rental}" method="post" class="mt-3">
+        <div class="form-group">
+            <label for="movie">Movie</label>
+            <select th:field="*{movie.id}" class="form-control" id="movie" required>
+                <option th:each="movie : ${movies}" th:value="${movie.id}" th:text="${movie.name}">
+                    Select a Movie
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="customer">Customer</label>
+            <select th:field="*{customer.id}" class="form-control" id="customer" required>
+                <option th:each="customer : ${customers}" th:value="${customer.id}" th:text="${customer.name}">
+                    Select a Customer
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="rentalStart">Rental Start Date</label>
+            <input type="date" th:field="*{rentalStart}" class="form-control" id="rentalStart" required>
+        </div>
+
+        <div class="form-group">
+            <label for="rentalFinish">Rental Finish Date</label>
+            <input type="date" th:field="*{rentalFinish}" class="form-control" id="rentalFinish">
+        </div>
+
+        <button type="submit" class="btn btn-success">Save</button>
+        <a th:href="@{/ui/rentals/}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+</body>
+</html>
